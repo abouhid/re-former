@@ -1,65 +1,49 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
-
-# Project Name
-
-> One paragraph statement about the project.
-
-![screenshot](./app_screenshot.png)
-
-Additional description about the project and its features.
+# Re-former Project
+  The aim of this project is practicing what we have learned about creating Forms in Ruby on Rails. We have created the back-end of a blog in which you can:
+* Create a username, email and password through a form_for;
+* Edit the usernames, emails and passwords created;
 
 ## Built With
 
-- Major languages,
-- frameworks,
-- technologies used
-
-## Live Demo
-
-[Live Demo Link](https://livedemo.com)
-
-
-## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
+- Ruby on Rails version 6.0
 
 ### Prerequisites
 
-### Setup
+- Browser (Google Chrome, Mozilla Firefox, Safari or any other browser)
+- Ruby and Ruby on Rails installed in your machine
+- SQLite installed in your machine
 
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
+### Getting Started
+```
+Open Terminal
+run git clone git@github.com:KelynPNjeri/re-former.git
+run cd re-former
+run yarn install --check-files (if asked)
+run rake db:migrate
+run rails s
+open http://localhost:3000/users in your browser
+```
+- In the browser you are able to fill and edit the forms.
 
 ## Authors
 
-👤 **Author1**
+👤 **Alexandre Bouhid**
 
-- Github: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
+- Github: [@abouhid](https://github.com/abouhid)
+- LinkedIn: [Alexandre Bouhid](https://www.linkedin.com/in/alexandrebouhid/)
 
-👤 **Author2**
+👤 **Kelyn Paul Njeri**
 
-- Github: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
+- Github: [@KelynPNjeri](https://github.com/KelynPNjeri)
+- Twitter: [@KelynNjeri](https://twitter.com/kelyn-njeri)
+- Linkedin: [Kelyn Paul](https://linkedin.com/kelyn-paul)
+
 
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](https://github.com/KelynPNjeri/re-former/issues).
 
 ## Show your support
 
@@ -67,9 +51,10 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Microverse
+- GitHub
+- TheOdinProject
+- Ruby
 
 ## 📝 License
 
