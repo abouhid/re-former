@@ -1,4 +1,4 @@
-# Micro-reddit Project
+# Re-former Project
   The aim of this project is practicing what we have learned about creating Forms in Ruby on Rails. We have created the back-end of a blog in which you can:
 * Create a username, email and password through a form_for;
 * Edit the usernames, emails and passwords created;
