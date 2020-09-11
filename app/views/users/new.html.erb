@@ -33,10 +33,10 @@
 <%
 =end%>
 
-<%= form_for @user, url: {action: "new"} do |f| %>
-  <%= f.text_field :username, :value => 'John Doe' %>
-  <%= f.text_field :email, :value => "johnny123@gmail.com"%>
-  <%= f.text_field :password, placeholder: "password" %>
+<%= form_for @user do |f| %>
+  <%= f.text_field :username%>
+  <%= f.text_field :email%>
+  <%= f.text_field :password%>
 
-  <%= f.submit "Submit" %>
+  <%= f.submit "Add User" %>
 <% end %>
