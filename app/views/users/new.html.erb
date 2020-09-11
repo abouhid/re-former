@@ -1,42 +1,36 @@
-<%
-=begin%>
- <form action='/users' method="POST">
-    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-    <div class="field">
-        <label for="username">Username</label>
-        <input type="text" id="username" placeholder="Enter Username" name="user[username]">
-    </div>
-    <div class="field">
-        <label for="email">Email</label>
-        <input type="text" id="email" placeholder="Enter email" name="user[email]">
-    </div>
-    <div class="field">
-        <label for="password">Password</label>
-        <input type="password" id="password" placeholder="Enter Password" name="user[password]">
-    </div>
-    <input type="submit">
-</form> 
-<%
-=end%>
+<%= form_for(@user)  do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
-<%
-=begin%>
- <%= form_tag("/users", method: "post") do %>
-  <%= label_tag(:username, "Username:") %>
-  <%= text_field_tag(:username) %><br>
-  <%= label_tag(:email, "Email:") %>
-  <%= text_field_tag(:email) %><br>
-  <%= label_tag(:password, "Password:") %>
-  <%= text_field_tag(:password) %><br>
-  <%= submit_tag("Submit") %>
-<% end %> 
-<%
-=end%>
-
-<%= form_for @user, url: {action: "new"} do |f| %>
-  <%= f.text_field :username, :value => 'John Doe' %>
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <p>
+ <%= f.text_field :username, :value => 'John Doe' %>
   <%= f.text_field :email, :value => "johnny123@gmail.com"%>
   <%= f.text_field :password, placeholder: "password" %>
+  </p>
 
+  <p>
   <%= f.submit "Submit" %>
+  </p>
+   <p> Last added Users</p>
+
+    <ul id="users">
+  <% @users.each do |user| %>
+    <li>
+        <%= 'Username = ' + user.username  %><br>
+        <%= 'Email = ' + user.email  %><br>     
+          <%= link_to "Edit User", edit_user_path(user.id) %>
+          <br> <br> 
+    
+    </li>
+    <% end %>
+</ul>
 <% end %>
+
